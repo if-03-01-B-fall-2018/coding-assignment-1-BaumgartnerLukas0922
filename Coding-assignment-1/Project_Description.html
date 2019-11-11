@@ -1,0 +1,75 @@
+<!--Wos macht des?-->
+<!--des steht im coding assignment drin, wenn wir so an counter einbauen bekommen ma a plus :D -->
+<!--Aha, des is wichtig-->
+<!--Ne eh ned, hab ma nur dacht es schadet ned, es ersetzt dann hoid die durchnummerieriung von ordered list 
+ok passt, vlt hab i's einfach nu falsch verwendet, schau i mir dann glei an, bin kurz essen-->
+<!--passt-->
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Coding Assignment</title>
+      <style>
+        body:{
+        	counter-reset: sec;
+        }
+        h2::before:{
+        	counter-increment: sec;
+          content: counter(sec) " ";
+        }
+      </style>
+      <script>
+        var colors = ["white", "black", "black","black"];
+        var textcolors = ["black", "white", "red","green"];
+        var colorIndex = 0;
+        function changeColor() {
+          var col = document.getElementById("body");
+          if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+          }
+          col.style.backgroundColor = colors[colorIndex];
+          col.style.color = textcolors[colorIndex];
+          colorIndex++;
+    }
+</script>
+    </head>
+    <!--<div style ="background-image: url('https://www.br.de/puls/themen/netz/willy-wonka-meme-108~_v-img__16__9__l_-1dc0e8f74459dd04c91a0d45af4972b9069f1135.jpg?version=10a8c');">-->
+    <body id="body">
+      
+      <h1>Namé</h1>
+      <ol>
+        <h2><li>Group-Chats</li></h2>
+        <ul style="list-style-type:disc;">
+          <li>can be easily created and managed</li>
+          <li>members of groups can be invited</li>
+          <li>less annoyance from bots</li>
+          <li>announcment-setting, only the admin can write</li>
+          <li>
+            <h4 id="pref" style="padding:0;margin:0">Préferences</h4>
+            <ul margin-bottom: 0;>
+              <li>groups can be made public</li>
+              <li>the group-name can be changed whenever the admin wants</li>
+              <li>group joincodes will be created randomly</li>
+            </ul>
+          </li>
+      	</ul>
+        <h2><li>Accounts</li></h2>
+         <ul style="list-style-type:disc;">
+          <li>Accounts can be  created easily</li>
+          <li>Autologin is available</li>
+          <li>Accounts can be modified</li>
+          <li></li>
+        </ul>
+        <h2><li>Désign</li></h2>
+         <ul style="list-style-type:disc;">
+          <li>the Chat background can be changed</li>
+          <li>the font-family can be changed</li>
+          <li>dark and light mode available <button onclick="changeColor();">Switch theme</button></li>
+           <!-- nice des klingt richtig guad, des wird a super seite
+Oba i warat dafür dass wir des auf bestimmte Farben begrenzen dawei hoid
+-->
+          <li>understandable button-icons</li>
+        </ul>
+      </ol>
+    </body>
+</html>
+    </body>
